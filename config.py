@@ -5,5 +5,5 @@ config['partyName'] = u'\ud83d\udca5CAOS EPIC TEAM FFA\ud83d\udca5'
 config['sessionType'] = 'ffa'
 config['maxPartySize'] = 15
 config['port'] = 43210
-config['playlistCode'] = 434248
-config['statsURL'] = 'https://discord.gg/8b858RBdEy'
+config['playlistCode'] = 484195
+config['statsURL'] = 'https://discord.gg/seQnYEYJ4r'
