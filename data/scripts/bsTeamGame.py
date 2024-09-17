@@ -7,8 +7,8 @@ import copy
 import bsTutorial
 import bsInternal
 
-gDefaultTeamColors = ((	0.4, 0.2, 0.1), (1, 0, 0))
-gDefaultTeamNames = ("Potatos", "Agentes")
+gDefaultTeamColors = ((	1, 0.2, 1), (1, 0, 0))
+gDefaultTeamNames = ("Potatos", "Tomatos")
 
 gTeamSeriesLength = 7
 gFFASeriesLength = 24

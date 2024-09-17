@@ -13,6 +13,7 @@ bank = os.path.join(path, 'banks.json')
 customers = os.path.join(path, 'effectCustomers.json')
 cmdlogfile = os.path.join(path, 'cmdlog.txt')
 roles = os.path.join(path, 'roles.json')
+clanes = os.path.join(path, 'clanes.json')
 
 # print(ver_roles())
 class storage:
@@ -21,7 +22,7 @@ class storage:
 
 
 # creamos una lista con todos los archivos
-myfiles = [stats, pStats, bank, roles, customers]
+myfiles = [stats, pStats, bank, roles, customers, clanes]
 
 # creamos este diccionario vacio para poder guardar los archivos
 empty = {}
