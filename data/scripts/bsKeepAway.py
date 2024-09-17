@@ -66,8 +66,9 @@ class KeepAwayGame(bs.TeamGameActivity):
         return ('carry the flag for ${ARG1} seconds',self.settings['Hold Time'])
 
     def onTransitionIn(self):
-        bs.TeamGameActivity.onTransitionIn(self, music='Keep Away')
-
+        bs.TeamGameActivity.onTransitionIn(self, music='Keep Away' 
+                                           if self.settings['Epic Mode'] else 'Survival')
+        self._startGameTime = bs.getGameTime()
     def onTeamJoin(self,team):
         team.gameData['timeRemaining'] = self.settings["Hold Time"]
         self._updateScoreBoard()
