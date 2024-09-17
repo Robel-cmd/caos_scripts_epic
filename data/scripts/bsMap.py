@@ -413,8 +413,8 @@ class FootballStadium(Map):
 
         def snowfall():
             p = (-10+(random.random()*30),15,-10+(random.random()*30))
-            v = ((-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0), -50.0,(-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0))
-            bs.emitBGDynamics(position=p,velocity=v,count=10,scale=1+random.random(),spread=0,chunkType='thinSmoke')
+            v = ((-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0), -50.0,(-5.0+random.random()*10.0) * (-1.0 if p[0] > 0 else 1.0))
+            bs.emitBGDynamics(position=p,velocity=v,count=3,scale=1+random.random(),spread=0,chunkType='ice',emitType='tendrils')
         
         bs.gameTimer(20,bs.Call(snowfall),repeat = True)
 
@@ -630,8 +630,8 @@ class RoundaboutMap(Map):
 
         def snowfall():
             p = (-10+(random.random()*30),15,-10+(random.random()*30))
-            v = ((-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0), -50.0,(-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0))
-            bs.emitBGDynamics(position=p,velocity=v,count=10,scale=1+random.random(),spread=0,chunkType='spark')
+            v = ((-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0), -50.0,(-5.0+random.random()*10.0) * (-1.0 if p[0] > 0 else 1.0))
+            bs.emitBGDynamics(position=p,velocity=v,count=3,scale=1+random.random(),spread=0,chunkType='ice',emitType='tendrils')
         
         bs.gameTimer(20,bs.Call(snowfall),repeat = True)
 
@@ -831,7 +831,7 @@ class ThePadMap(Map):
         def snowfall():
             p = (-10+(random.random()*30),15,-10+(random.random()*30))
             v = ((-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0), -50.0,(-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0))
-            bs.emitBGDynamics(position=p,velocity=v,count=10,scale=1+random.random(),spread=0,chunkType='spark')
+            bs.emitBGDynamics(position=p,velocity=v,count=3,scale=1+random.random(),spread=0,chunkType='ice',emitType='tendrils')
         
         bs.gameTimer(20,bs.Call(snowfall),repeat = True)
 
@@ -895,7 +895,7 @@ class DoomShroomMap(Map):
         def snowfall():
             p = (-10+(random.random()*30),15,-10+(random.random()*30))
             v = ((-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0), -50.0,(-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0))
-            bs.emitBGDynamics(position=p,velocity=v,count=10,scale=1+random.random(),spread=0,chunkType='spark')
+            bs.emitBGDynamics(position=p,velocity=v,count=3,scale=1+random.random(),spread=0,chunkType='ice',emitType='tendrils')
         
         bs.gameTimer(20,bs.Call(snowfall),repeat = True)
 
@@ -1155,7 +1155,7 @@ class TowerDMap(Map):
         def snowfall():
             p = (-10+(random.random()*30),15,-10+(random.random()*30))
             v = ((-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0), -50.0,(-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0))
-            bs.emitBGDynamics(position=p,velocity=v,count=10,scale=1+random.random(),spread=0,chunkType='spark')
+            bs.emitBGDynamics(position=p,velocity=v,count=3,scale=1+random.random(),spread=0,chunkType='ice',emitType='tendrils')
         
         bs.gameTimer(20,bs.Call(snowfall),repeat = True)
 
@@ -1312,7 +1312,7 @@ class StepRightUpMap(Map):
         def snowfall():
             p = (-10+(random.random()*30),15,-10+(random.random()*30))
             v = ((-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0), -50.0,(-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0))
-            bs.emitBGDynamics(position=p,velocity=v,count=10,scale=1+random.random(),spread=0,chunkType='spark')
+            bs.emitBGDynamics(position=p,velocity=v,count=3,scale=1+random.random(),spread=0,chunkType='ice',emitType='tendrils')
         
         bs.gameTimer(20,bs.Call(snowfall),repeat = True)
 
@@ -1392,7 +1392,7 @@ class CourtyardMap(Map):
         def snowfall():
             p = (-10+(random.random()*30),15,-10+(random.random()*30))
             v = ((-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0), -50.0,(-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0))
-            bs.emitBGDynamics(position=p,velocity=v,count=10,scale=1+random.random(),spread=0,chunkType='spark')
+            bs.emitBGDynamics(position=p,velocity=v,count=3,scale=1+random.random(),spread=0,chunkType='ice',emitType='tendrils')
         
         bs.gameTimer(20,bs.Call(snowfall),repeat = True)
 
@@ -1472,7 +1472,7 @@ class RampageMap(Map):
         def snowfall():
             p = (-10+(random.random()*30),15,-10+(random.random()*30))
             v = ((-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0), -50.0,(-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0))
-            bs.emitBGDynamics(position=p,velocity=v,count=10,scale=1+random.random(),spread=0,chunkType='spark')
+            bs.emitBGDynamics(position=p,velocity=v,count=3,scale=1+random.random(),spread=0,chunkType='ice',emitType='tendrils')
         
         bs.gameTimer(20,bs.Call(snowfall),repeat = True)
 
