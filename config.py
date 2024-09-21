@@ -7,4 +7,4 @@ config['maxPartySize'] = 15
 config['port'] = 43210
 config['playlistCode'] = 484586
 config['statsURL'] = 'https://discord.gg/seQnYEYJ4r'
-config['partyIsPublic'] = False
+config['partyIsPublic'] = True
