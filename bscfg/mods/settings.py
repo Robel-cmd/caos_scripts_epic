@@ -30,7 +30,7 @@ k_msg = False  # Killing Message
 
 k_pop = False  # Killing Message PopUp
 nightMode = False
-nightMode = True
+nightMode = False
 
 enableChatFilter = True
 

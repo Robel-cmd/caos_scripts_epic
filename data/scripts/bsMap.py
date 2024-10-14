@@ -3,6 +3,7 @@ import bsUtils
 import random
 import bsVector
 
+tintG =(0.8, 1, 1.2)
 _maps = {}
 
 def preloadPreviewMedia():
@@ -368,7 +369,7 @@ class HockeyStadium(Map):
         bsGlobals.floorReflection = True
         bsGlobals.debrisFriction = 0.3
         bsGlobals.debrisKillHeight = -0.3
-        bsGlobals.tint = (1.2,1.3,1.33)
+        bsGlobals.tint = (tintG)
         bsGlobals.ambientColor = (1.15,1.25,1.6)
         bsGlobals.vignetteOuter = (0.66,0.67,0.73)
         bsGlobals.vignetteInner = (0.93,0.93,0.95)
@@ -413,12 +414,12 @@ class FootballStadium(Map):
 
         def snowfall():
             p = (-10+(random.random()*30),15,-10+(random.random()*30))
-            v = ((-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0), -50.0,(-5.0+random.random()*10.0) * (-1.0 if p[0] > 0 else 1.0))
-            bs.emitBGDynamics(position=p,velocity=v,count=6,scale=1+random.random(),spread=0,chunkType='ice',emitType='tendrils')
+            v = ((-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0), -50.0,(-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0))
+            bs.emitBGDynamics(position=p,velocity=v,count=10,scale=1+random.random(),spread=0,chunkType='spark')
         
-        bs.gameTimer(20,bs.Call(snowfall),repeat = True)
+        #bs.gameTimer(20,bs.Call(snowfall),repeat = True)
 
-        g.tint = (1.3, 1.2, 1.0)
+        g.tint = (tintG)
         g.ambientColor = (1.3, 1.2, 1.0)
         g.vignetteOuter = (0.57, 0.57, 0.57)
         g.vignetteInner = (0.9, 0.9, 0.9)
@@ -493,7 +494,7 @@ class BridgitMap(Map):
                          self.preloadData['bgMaterial'],
                          bs.getSharedObject('deathMaterial')]})
         bsGlobals = bs.getSharedObject('globals')
-        bsGlobals.tint = (1.1, 1.2, 1.3)
+        bsGlobals.tint = (tintG)
         bsGlobals.ambientColor = (1.1, 1.2, 1.3)
         bsGlobals.vignetteOuter = (0.65, 0.6, 0.55)
         bsGlobals.vignetteInner = (0.9, 0.9, 0.93)
@@ -561,7 +562,7 @@ class BigGMap(Map):
                          self.preloadData['bgMaterial'],
                          bs.getSharedObject('deathMaterial')]})
         bsGlobals = bs.getSharedObject('globals')
-        bsGlobals.tint = (1.1, 1.2, 1.3)
+        bsGlobals.tint = (tintG)
         bsGlobals.ambientColor = (1.1, 1.2, 1.3)
         bsGlobals.vignetteOuter = (0.65, 0.6, 0.55)
         bsGlobals.vignetteInner = (0.9, 0.9, 0.93)
@@ -630,12 +631,12 @@ class RoundaboutMap(Map):
 
         def snowfall():
             p = (-10+(random.random()*30),15,-10+(random.random()*30))
-            v = ((-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0), -50.0,(-5.0+random.random()*10.0) * (-1.0 if p[0] > 0 else 1.0))
-            bs.emitBGDynamics(position=p,velocity=v,count=6,scale=1+random.random(),spread=0,chunkType='ice',emitType='tendrils')
+            v = ((-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0), -50.0,(-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0))
+            bs.emitBGDynamics(position=p,velocity=v,count=10,scale=1+random.random(),spread=0,chunkType='spark')
         
-        bs.gameTimer(20,bs.Call(snowfall),repeat = True)
+        #bs.gameTimer(20,bs.Call(snowfall),repeat = True)
 
-        bsGlobals.tint = (1.0, 1.05, 1.1)
+        bsGlobals.tint = (tintG)
         bsGlobals.ambientColor = (1.0, 1.05, 1.1)
         bsGlobals.shadowOrtho = True
         bsGlobals.vignetteOuter = (0.63, 0.65, 0.7)
@@ -702,7 +703,7 @@ class MonkeyFaceMap(Map):
             'materials':[bs.getSharedObject('railingMaterial')],
             'bumper':True})
         bsGlobals = bs.getSharedObject('globals')
-        bsGlobals.tint = (1.1, 1.2, 1.2)
+        bsGlobals.tint = (tintG)
         bsGlobals.ambientColor = (1.2, 1.3, 1.3)
         bsGlobals.vignetteOuter = (0.60, 0.62, 0.66)
         bsGlobals.vignetteInner = (0.97, 0.95, 0.93)
@@ -767,7 +768,7 @@ class ZigZagMap(Map):
             'materials':[bs.getSharedObject('railingMaterial')],
             'bumper':True})
         bsGlobals = bs.getSharedObject('globals')
-        bsGlobals.tint = (1.0, 1.15, 1.15)
+        bsGlobals.tint = (tintG)
         bsGlobals.ambientColor = (1.0, 1.15, 1.15)
         bsGlobals.vignetteOuter = (0.57, 0.59, 0.63)
         bsGlobals.vignetteInner = (0.97, 0.95, 0.93)
@@ -831,11 +832,11 @@ class ThePadMap(Map):
         def snowfall():
             p = (-10+(random.random()*30),15,-10+(random.random()*30))
             v = ((-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0), -50.0,(-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0))
-            bs.emitBGDynamics(position=p,velocity=v,count=6,scale=1+random.random(),spread=0,chunkType='ice',emitType='tendrils')
+            bs.emitBGDynamics(position=p,velocity=v,count=10,scale=1+random.random(),spread=0,chunkType='spark')
         
-        bs.gameTimer(20,bs.Call(snowfall),repeat = True)
+        #bs.gameTimer(20,bs.Call(snowfall),repeat = True)
 
-        bsGlobals.tint = (1.1, 1.1, 1.0)
+        bsGlobals.tint = (tintG)
         bsGlobals.ambientColor = (1.1, 1.1, 1.0)
         bsGlobals.vignetteOuter = (0.7, 0.65, 0.75)
         bsGlobals.vignetteInner = (0.95, 0.95, 0.93)
@@ -895,11 +896,11 @@ class DoomShroomMap(Map):
         def snowfall():
             p = (-10+(random.random()*30),15,-10+(random.random()*30))
             v = ((-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0), -50.0,(-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0))
-            bs.emitBGDynamics(position=p,velocity=v,count=6,scale=1+random.random(),spread=0,chunkType='ice',emitType='tendrils')
+            bs.emitBGDynamics(position=p,velocity=v,count=10,scale=1+random.random(),spread=0,chunkType='spark')
         
-        bs.gameTimer(20,bs.Call(snowfall),repeat = True)
+        #bs.gameTimer(20,bs.Call(snowfall),repeat = True)
 
-        bsGlobals.tint = (0.82, 1.10, 1.15)
+        bsGlobals.tint = (tintG)
         bsGlobals.ambientColor = (0.9, 1.3, 1.1)
         bsGlobals.shadowOrtho = False
         bsGlobals.vignetteOuter = (0.76, 0.76, 0.76)
@@ -1021,7 +1022,7 @@ class TipTopMap(Map):
             'materials':[bs.getSharedObject('railingMaterial')],
             'bumper':True})
         bsGlobals = bs.getSharedObject('globals')
-        bsGlobals.tint = (0.8, 0.9, 1.3)
+        bsGlobals.tint = (tintG)
         bsGlobals.ambientColor = (0.8, 0.9, 1.3)
         bsGlobals.vignetteOuter = (0.79, 0.79, 0.69)
         bsGlobals.vignetteInner = (0.97, 0.97, 0.99)
@@ -1084,7 +1085,7 @@ class CragCastleMap(Map):
         bsGlobals = bs.getSharedObject('globals')
         bsGlobals.shadowOrtho = True
         bsGlobals.shadowOffset = (0,0, -5.0)
-        bsGlobals.tint = (1.15, 1.05, 0.75)
+        bsGlobals.tint = (tintG)
         bsGlobals.ambientColor = (1.15,1.05,0.75)
         bsGlobals.vignetteOuter = (0.6, 0.65, 0.6)
         bsGlobals.vignetteInner = (0.95, 0.95, 0.95)
@@ -1155,11 +1156,11 @@ class TowerDMap(Map):
         def snowfall():
             p = (-10+(random.random()*30),15,-10+(random.random()*30))
             v = ((-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0), -50.0,(-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0))
-            bs.emitBGDynamics(position=p,velocity=v,count=6,scale=1+random.random(),spread=0,chunkType='ice',emitType='tendrils')
+            bs.emitBGDynamics(position=p,velocity=v,count=10,scale=1+random.random(),spread=0,chunkType='spark')
         
-        bs.gameTimer(20,bs.Call(snowfall),repeat = True)
+        #bs.gameTimer(20,bs.Call(snowfall),repeat = True)
 
-        bsGlobals.tint = (1.15, 1.11, 1.03)
+        bsGlobals.tint = (tintG)
         bsGlobals.ambientColor = (1.2, 1.1, 1.0)
         bsGlobals.vignetteOuter = (0.7, 0.73, 0.7)
         bsGlobals.vignetteInner = (0.95, 0.95, 0.95)
@@ -1312,11 +1313,11 @@ class StepRightUpMap(Map):
         def snowfall():
             p = (-10+(random.random()*30),15,-10+(random.random()*30))
             v = ((-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0), -50.0,(-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0))
-            bs.emitBGDynamics(position=p,velocity=v,count=6,scale=1+random.random(),spread=0,chunkType='ice',emitType='tendrils')
+            bs.emitBGDynamics(position=p,velocity=v,count=10,scale=1+random.random(),spread=0,chunkType='spark')
         
-        bs.gameTimer(20,bs.Call(snowfall),repeat = True)
+        #bs.gameTimer(20,bs.Call(snowfall),repeat = True)
 
-        bsGlobals.tint = (1.2, 1.1, 1.0)
+        bsGlobals.tint = (tintG)
         bsGlobals.ambientColor = (1.2, 1.1, 1.0)
         bsGlobals.vignetteOuter = (0.7, 0.65, 0.75)
         bsGlobals.vignetteInner = (0.95, 0.95, 0.93)
@@ -1392,11 +1393,11 @@ class CourtyardMap(Map):
         def snowfall():
             p = (-10+(random.random()*30),15,-10+(random.random()*30))
             v = ((-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0), -50.0,(-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0))
-            bs.emitBGDynamics(position=p,velocity=v,count=6,scale=1+random.random(),spread=0,chunkType='ice',emitType='tendrils')
+            bs.emitBGDynamics(position=p,velocity=v,count=10,scale=1+random.random(),spread=0,chunkType='spark')
         
-        bs.gameTimer(20,bs.Call(snowfall),repeat = True)
+        #bs.gameTimer(20,bs.Call(snowfall),repeat = True)
 
-        bsGlobals.tint = (1.2, 1.17, 1.1)
+        bsGlobals.tint = (tintG)
         bsGlobals.ambientColor = (1.2, 1.17, 1.1)
         bsGlobals.vignetteOuter = (0.6, 0.6, 0.64)
         bsGlobals.vignetteInner = (0.95, 0.95, 0.93)
@@ -1472,11 +1473,11 @@ class RampageMap(Map):
         def snowfall():
             p = (-10+(random.random()*30),15,-10+(random.random()*30))
             v = ((-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0), -50.0,(-5.0+random.random()*30.0) * (-1.0 if p[0] > 0 else 1.0))
-            bs.emitBGDynamics(position=p,velocity=v,count=6,scale=1+random.random(),spread=0,chunkType='ice',emitType='tendrils')
+            bs.emitBGDynamics(position=p,velocity=v,count=10,scale=1+random.random(),spread=0,chunkType='spark')
         
-        bs.gameTimer(20,bs.Call(snowfall),repeat = True)
+        #bs.gameTimer(20,bs.Call(snowfall),repeat = True)
 
-        bsGlobals.tint = (1.2, 1.1, 0.97)
+        bsGlobals.tint = (tintG)
         bsGlobals.ambientColor = (1.3, 1.2, 1.03)
         bsGlobals.vignetteOuter = (0.62, 0.64, 0.69)
         bsGlobals.vignetteInner = (0.97, 0.95, 0.93)
